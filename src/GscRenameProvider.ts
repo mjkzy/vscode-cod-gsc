@@ -88,8 +88,6 @@ export class GscRenameProvider implements vscode.RenameProvider {
         // Get group before cursor
         var groupAtCursor = gscData.root.findKeywordAtPosition(position);
 
-        console.log(`getRenameEdits: groupatcursor.type is ${groupAtCursor?.type}`);
-
         if (groupAtCursor === undefined || groupAtCursor.parent === undefined) {
             return locations;
         }
@@ -106,6 +104,7 @@ export class GscRenameProvider implements vscode.RenameProvider {
             case GroupType.VariableName:
             case GroupType.VariableNameGlobal:
             case GroupType.Identifier:
+            case GroupType.FunctionParameterName:
                 const varLocations = GscRenameProvider.getRenameEditsForVariable(gscFile, groupAtCursor);
                 locations.push(...varLocations);
                 break;
@@ -212,7 +211,7 @@ export class GscRenameProvider implements vscode.RenameProvider {
         // walk through the function to get each reference of local variable names
         if (!macro && enclosingFunction) {
             enclosingFunction.group.walk(group => {
-                if (group.type === GroupType.VariableName) {
+                if (group.type === GroupType.VariableName || group.type === GroupType.FunctionParameterName) {
                     const tok = group.getFirstToken();
                     if (tok?.name === variableName) {
                         locations.push({
