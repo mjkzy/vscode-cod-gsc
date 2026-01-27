@@ -3236,6 +3236,7 @@ export class GscGroup {
 
             }
         }
+        
         if (token === undefined) {
             return undefined;
         }

@@ -76,8 +76,6 @@ export class GscRenameProvider implements vscode.RenameProvider {
         }
     }
 
-
-
     public static async getRenameEdits(
         gscFile: GscFile,
         position: vscode.Position,
@@ -89,6 +87,9 @@ export class GscRenameProvider implements vscode.RenameProvider {
 
         // Get group before cursor
         var groupAtCursor = gscData.root.findKeywordAtPosition(position);
+
+        console.log(`getRenameEdits: groupatcursor.type is ${groupAtCursor?.type}`);
+
         if (groupAtCursor === undefined || groupAtCursor.parent === undefined) {
             return locations;
         }
