@@ -192,7 +192,8 @@ When GSC file is replaced by another GSC file in multi-root workspace because of
 - Check for unreachable code
 
 ## Install
-This extension will soon be available through Visual Studio Marketplace under "vscode-gsc".
+This extension is available on the Visual Studio Marketplace under "Call of Duty GSC" (
+mjkzy.vscode-gsc-ultimate)
 
 ## Support
 [Click here to tip the original developer via PayPal!](https://www.paypal.com/donate/?hosted_button_id=R59Y6UN9LJVXQ)
