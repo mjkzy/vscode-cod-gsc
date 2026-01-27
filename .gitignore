@@ -6,3 +6,5 @@ gsc-examples
 # Ignore output folder
 dist
 out
+
+package-lock.json
