@@ -1,15 +1,15 @@
 # vscode-gsc
 
-A Visual Studio Code extension that adds language support for `.GSC` and `.GSH` files used for ingame scripting on Call of Duty games. The extension supports all COD games, but is primarily focusing on Call of Duty: 4 and on. This is **NOT** a GSC compiler and is [a extension used in Visual Studio Code!](https://marketplace.visualstudio.com/items?itemName=mjkzy.vscode-gsc-ultimate)
-
-_This is a modified fork of [vscode-cod-gsc](https://github.com/eyza-cod2/vscode-cod-gsc)._
-
 > [!WARNING] 
-> This extension is still in development. For current functionality, check the [List of Features](#list-of-features).
+> This extensive fork will not receive any more updates in favor of a better rewrite of GSC support for VSCode, **[GSCLSP](https://github.com/Lierrmm/GSCLSP)**. This new extension plans to be fast and simple to work with, mainly not being slowed down by constant GSC indexing, slow error diagnostics, and more.
+
+A Visual Studio Code extension that adds language support for `.GSC` and `.GSH` files used for ingame scripting on Call of Duty games. The extension supports all COD games, but is primarily focusing on Call of Duty: 4 and on.
+
+_This is a modified fork of [vscode-cod-gsc](https://github.com/eyza-cod2/vscode-cod-gsc). The original repository is not archived, however is inactive._ 
 
 ## Supported Games
 
-| Game           | Code | Status             | Not working yet                                                   |
+| Game           | Code | Status             | Not working                                                   |
 |----------------|------|--------------------|------------------------------------------------------------------ |
 | CoD1           | IW1  | ✅ |                                                                                  |
 | CoD2           | IW2  | ✅ |                                                                                  |
@@ -192,8 +192,7 @@ When GSC file is replaced by another GSC file in multi-root workspace because of
 - Check for unreachable code
 
 ## Install
-This extension is available on the Visual Studio Marketplace under "Call of Duty GSC" (
-mjkzy.vscode-gsc-ultimate)
+This extension is no longer available on the Visual Studio Marketplace.
 
 ## Support
 [Click here to tip the original developer via PayPal!](https://www.paypal.com/donate/?hosted_button_id=R59Y6UN9LJVXQ)
